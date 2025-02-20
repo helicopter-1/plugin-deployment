@@ -4,7 +4,7 @@
 
 Guide on how to deploy Contracts: https://github.com/nmzn/deployment-guide
 
-The install Script hasnt a password check yet. Will include that in later updates.
+The install Script hasn't a password check yet. Will include that in later updates.
 
 Contents:
 
@@ -36,5 +36,5 @@ Contents:
     
    #Important
    
-   Keep in mind that you still have to do the Oracle Contract deployment part wich you find here: https://docs.goplugin.co
+   Keep in mind that you still have to do the Oracle Contract deployment part which you find here: https://docs.goplugin.co
    
