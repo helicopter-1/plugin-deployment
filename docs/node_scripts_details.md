@@ -1,7 +1,7 @@
 # plugin-deployment
 Modular scripts for @GoPlugin ($PLI) node setup & maintenance.
 
-### contributers: 
+### contributors: 
 A very special thanks & shout out to the following discord members for their input & testing;
 - @samsam
 - @go140point6
@@ -15,11 +15,11 @@ A very special thanks & shout out to the following discord members for their inp
 
 # TL;DR - Fully Automated Installation
 
-*_Update 28.03.22 : code moved to performing automated installation by default. Operators that wish to use their own credentials should still continue to update the vars file manually before excuting the main script._*
+*_Update 28.03.22 : code moved to performing automated installation by default. Operators that wish to use their own credentials should still continue to update the vars file manually before executing the main script._*
 
 ...
 
-The [node automated setup](node_autosetup.md) builds upon the previous 'node setup 101' guide in terms of the base linux system setup but removes the need for any vars file updates or seperate commands and prompts.
+The [node automated setup](node_autosetup.md) builds upon the previous 'node setup 101' guide in terms of the base linux system setup but removes the need for any vars file updates or separate commands and prompts.
 
 
 Simply follow the steps in the [node automated setup](node_autosetup.md) & have a working node in approx 20-30mins _(depending on system specs)_ ready for you to perform your REMIX contract & jobs config steps.
@@ -72,7 +72,7 @@ The following VARIABLES should be updated at a minimum for your individual imple
 |PASS_KEYSTORE="$oM3$tr*nGp4$$w0Rd$"| Min. 12 characters, 3 lower, 3 upper, 3 numbers, 3 symbols & no more than 3 identical consecutive characters|
 |DB_PWD_NEW="testdbpwd1234"|This is your new secure Postgres DB password & NO special characters|
 
-You can reveiw the 'sample.vars' file for the full list of VARIABLES.
+You can review the 'sample.vars' file for the full list of VARIABLES.
 
 
 
@@ -139,7 +139,7 @@ This test should return a job id to the terminal screen as follows;
 
 This function exports the node address keys to allow you to access any funds that have been added to the node. This is important in scenarios where an operator wishes to rebuild a node or where they may have simply added too much funds to the node address.
 
-The output json file (example below) is then imported to MM as per step 5 of ['Withdraw PLI from Plugin Node'](https://docs.goplugin.co/node-operators/withdraw-pli-from-plugin-node#step-5-now-choose-import-account-and-select-json-file-as-type.-pass-word-should-be-same-as-your-keys) of the offical docs.
+The output json file (example below) is then imported to MM as per step 5 of ['Withdraw PLI from Plugin Node'](https://docs.goplugin.co/node-operators/withdraw-pli-from-plugin-node#step-5-now-choose-import-account-and-select-json-file-as-type.-pass-word-should-be-same-as-your-keys) of the official docs.
 
 
 ### Function: logrotate
@@ -213,13 +213,13 @@ User account deletion: The script does _NOT_ delete any other user or system acc
 Basic function is to;
 
 - stop & delete all PM2 processes
-- stop all postgress services
+- stop all postgresql services
 - uninstall all postgres related components
 - delete all postgres related system folders
 - remove the postgres user & group
-- delete all plugin installaton folders under the users $HOME folder
+- delete all plugin installation folders under the users $HOME folder
 
-This script resets your VPS to a pre-deployment state, allowing you to re-install the node software without reseting the VPS system.
+This script resets your VPS to a pre-deployment state, allowing you to re-install the node software without resetting the VPS system.
 
 
 ---
@@ -229,7 +229,7 @@ This script resets your VPS to a pre-deployment state, allowing you to re-instal
 ## base_sys_setup.sh (_Optional - Recommended_)
 
 Updated to use modular functions allowing for individial functions to be run or 
-You can reveiw the 'sample.vars' file for the full list of VARIABLES.
+You can review the 'sample.vars' file for the full list of VARIABLES.
 
 This script performs OS level commands as follows;
 
@@ -241,7 +241,7 @@ This script performs OS level commands as follows;
 - Modifies UFW firewall logging to use only the ufw.log file
 - Modify SSH service to use alternate service port, update UFW & restart SSH
 
-_You can reveiw the 'sample.vars' file for the full list of VARIABLES._
+_You can review the 'sample.vars' file for the full list of VARIABLES._
 ### Usage
 
         Usage: ./base_sys_setup.sh {function}
